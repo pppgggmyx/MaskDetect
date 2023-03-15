@@ -433,7 +433,8 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
 
 def parse_opt(known=False):
-    torch.cuda.is_available()
+    print(torch.__version__)
+    print(torch.cuda.is_available())
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', type=str, default='weights/yolov5s.pt', help='initial weights path')
 
@@ -442,7 +443,7 @@ def parse_opt(known=False):
 
     parser.add_argument('--hyp', type=str, default='data/hyps/hyp.scratch-low.yaml', help='hyperparameters path')
 
-    parser.add_argument('--epochs', type=int, default=20, help='total training epochs')
+    parser.add_argument('--epochs', type=int, default=1, help='total training epochs')
     parser.add_argument('--batch-size', type=int, default=8, help='total batch size for all GPUs, -1 for autobatch')
 
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=640, help='train, val image size (pixels)')
