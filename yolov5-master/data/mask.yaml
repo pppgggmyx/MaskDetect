@@ -18,5 +18,5 @@ val: VOCdevkit/images/val  # 4952 images
 nc: 2
 
 # class names
-names: [ 'mask', 'no-mask']
+names: [ 'no-mask', 'mask']
 

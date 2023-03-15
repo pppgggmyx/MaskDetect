@@ -443,7 +443,7 @@ def parse_opt(known=False):
 
     parser.add_argument('--hyp', type=str, default='data/hyps/hyp.scratch-low.yaml', help='hyperparameters path')
 
-    parser.add_argument('--epochs', type=int, default=1, help='total training epochs')
+    parser.add_argument('--epochs', type=int, default=2, help='total training epochs')
     parser.add_argument('--batch-size', type=int, default=8, help='total batch size for all GPUs, -1 for autobatch')
 
     parser.add_argument('--imgsz', '--img', '--img-size', type=int, default=640, help='train, val image size (pixels)')
